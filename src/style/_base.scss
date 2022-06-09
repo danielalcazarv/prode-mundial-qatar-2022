@@ -1,3 +1,26 @@
-nav{
-    background-color: $color-green;
+body{
+    background-image: url(../img/grass-vector-tp.png);
+}
+
+
+.bg__event{
+    background: hsla(343, 51%, 46%, 1);
+    background: linear-gradient(90deg, hsla(343, 51%, 46%, 1) 0%, hsla(343, 51%, 46%, 1) 18%, hsla(341, 100%, 27%, 1) 45%, hsla(344, 100%, 15%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(343, 51%, 46%, 1) 0%, hsla(343, 51%, 46%, 1) 18%, hsla(341, 100%, 27%, 1) 45%, hsla(344, 100%, 15%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(343, 51%, 46%, 1) 0%, hsla(343, 51%, 46%, 1) 18%, hsla(341, 100%, 27%, 1) 45%, hsla(344, 100%, 15%, 1) 100%);
+}
+
+.btn__custom{
+    color: #ffffff;
+}
+
+.banner__img{
+    max-height: 200px;
+}
+
+ul li{
+    list-style: none;
+    text-decoration: none;
+    font-family: $font-grande;
+    font-size: 1.5rem;
 }

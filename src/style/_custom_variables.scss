@@ -1,22 +1,9 @@
 /********NavBar**********/
-.navbar-brand{
-    color: $color-black;
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus{
-        color: $color-black;
-        background-color: $color-green;
-        border-color: $color-black;
-        font-weight: 600;
-        box-shadow: $color-grey;
-    }
-}
 
 .nav-link{
-    color: $color-black;
+    color: $color-white;
     &:hover{
-        color: $color-grey;
+        color: $color-white;
         font-weight: 600;
         box-shadow: $color-grey;
     }
@@ -29,7 +16,7 @@
     &:active,
     &:visited,
     &:focus{
-        color: $color-black;
+        color: $color-white;
         background-color: $color-green;
         border-color: $color-black;
         box-shadow: $color-green;
