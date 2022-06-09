@@ -1,16 +1,16 @@
-$body-bg: #ffffff;
-$body-color: #111;
+$body-bg: #121212;
+$body-color: #ffff;
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
 html , body , #root {
     height: 100vh;
 }
-
 
 #root {
     display: flex;
@@ -25,3 +25,16 @@ html , body , #root {
 #root > main {
     flex-grow: 1;
 }
+
+.container__layout{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container__table{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
