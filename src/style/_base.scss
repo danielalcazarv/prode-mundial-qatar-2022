@@ -24,3 +24,45 @@ ul li{
     font-family: $font-grande;
     font-size: 1.5rem;
 }
+
+
+section{
+    .timer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 3em;
+        padding-top: 2em;
+        width: 100%;
+        height: 100%;
+        div{
+            text-align: center;
+            h3{
+                font-family: $font-grande;
+                font-size: 4em;
+            }
+        }
+        .timer__cd{
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            margin-top: 2em;
+            padding: 2em;
+            section{
+                p{
+                    font-family: $font-grande;
+                    font-size: 8em;
+                }
+                .timer__cd-tag{
+                    font-family: $font-grande;
+                    font-size: 3em;
+                }
+            }
+            span{
+                font-family: $font-grande;
+                font-size: 8em;
+            }
+        }
+    }
+}
