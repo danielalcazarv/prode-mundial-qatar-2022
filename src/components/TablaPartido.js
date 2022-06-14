@@ -1,0 +1,49 @@
+import { useEffect, useState } from "react";
+
+const TablaPartido = ({partidos}) => {
+    const [bandera1, setBandera1] = useState('A Definir');
+    const [bandera2, setBandera2] = useState('A Definir');
+    const banderUrl1 = "https://flagcdn.com/w160/"+bandera1+".webp"
+    const altUrl1 = "bandera"+bandera1
+    const banderUrl2 = "https://flagcdn.com/w160/"+bandera2+".webp"
+    const altUrl2 = "bandera"+bandera2
+
+    useEffect(()=>{
+        fetch('https://flagcdn.com/es/codes.json')
+            .then((response)=>response.json())
+            .then((jsonFlags)=>{
+                const getFlagCode = (obj, value) =>{
+                    let result;
+                    Object.getOwnPropertyNames(obj).some(key => {
+                        if (obj[key] === value) {
+                        result = key;
+                        return true;
+                        }
+                    });
+                    return result;
+                }
+                setBandera1(getFlagCode(jsonFlags, partidos.equipo1))
+                setBandera2(getFlagCode(jsonFlags, partidos.equipo2))
+            })
+        }
+    ,[])
+    
+
+    return (
+        <tr>
+            <th className="partido__orden" scope="row">{partidos.nro}</th>
+            <td className="pais">{partidos.equipo1}</td>
+            <td className="bandera">
+                <img className="img__bandera" src={banderUrl1} alt={altUrl1}></img>
+            </td>
+            <td><input className="resultado__input" type="number"/></td>
+            <td><input className="resultado__input" type="number"/></td>
+            <td className="bandera">
+                <img className="img__bandera" src={banderUrl2} alt={altUrl2}></img>
+            </td>
+            <td className="pais">{partidos.equipo2}</td>
+        </tr>
+    )
+}
+
+export default TablaPartido
