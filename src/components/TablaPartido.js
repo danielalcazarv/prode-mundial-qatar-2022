@@ -13,35 +13,28 @@ const TablaPartido = ({partidos}) => {
             .then((response)=>response.json())
             .then((jsonFlags)=>{
                 const getFlagCode = (obj, value) =>{
-                    let result;
-                    Object.getOwnPropertyNames(obj).some(key => {
-                        if (obj[key] === value) {
-                        result = key;
-                        return true;
-                        }
-                    });
-                    return result;
+                    return Object.keys(obj).find(key => obj[key] === value);
                 }
                 setBandera1(getFlagCode(jsonFlags, partidos.equipo1))
                 setBandera2(getFlagCode(jsonFlags, partidos.equipo2))
             })
         }
-    ,[])
+    ,[partidos.equipo1,partidos.equipo2])
     
 
     return (
         <tr>
-            <th className="partido__orden" scope="row">{partidos.nro}</th>
-            <td className="pais">{partidos.equipo1}</td>
-            <td className="bandera">
+            <th scope="row">{partidos.nro}</th>
+            <td>{partidos.equipo1}</td>
+            <td>
                 <img className="img__bandera" src={banderUrl1} alt={altUrl1}></img>
             </td>
             <td><input className="resultado__input" type="number"/></td>
             <td><input className="resultado__input" type="number"/></td>
-            <td className="bandera">
+            <td>
                 <img className="img__bandera" src={banderUrl2} alt={altUrl2}></img>
             </td>
-            <td className="pais">{partidos.equipo2}</td>
+            <td>{partidos.equipo2}</td>
         </tr>
     )
 }

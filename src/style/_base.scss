@@ -66,13 +66,46 @@ section{
         }
     }
 }
-
-table{
-    thead{
-        tr{
-            .grupo{
-                text-align: center;
+#container__table{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    table{
+        thead{
+            tr{
+                .grupo{
+                    text-align: center;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    text-align: center;
+                    .img__bandera{
+                        width: 80px;
+                        height: 50px;
+                    }
+                    .resultado__input{
+                        max-width: 1.7rem;
+                        text-align: center;
+                    }
+                    /*Ocultar flechas Input Number*/
+                    input[type=number]::-webkit-inner-spin-button, 
+                    input[type=number]::-webkit-outer-spin-button { 
+                        -webkit-appearance: none; 
+                        margin: 0; 
+                    }
+                    input[type=number] {
+                        -moz-appearance: textfield;
+                    }
+                }
             }
         }
     }
 }
+
+
+
+
+

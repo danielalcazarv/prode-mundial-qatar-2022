@@ -27,7 +27,11 @@ const TablasListContainer = () => {
     []);
     
   return (
-    <div className="container mx-lg-auto container__table">
+    <>
+    <div class="mx-auto my-4 bg__event">
+      <h3 class="text-center text__color">Fase de Grupos</h3>
+    </div>
+    <div className="container mx-lg-auto" id="container__table">
       <table className="table table-striped">
         {grupos.map(grupos=>{
           return(
@@ -36,6 +40,7 @@ const TablasListContainer = () => {
         })}
       </table>
     </div>
+    </>
   )
 }
 
